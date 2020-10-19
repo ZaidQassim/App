@@ -1,0 +1,198 @@
+<div id="tableaccordion">
+  <div class="card mt-4">
+      <div class="card-header border-0 py-1 bg-white">
+          <div class="d-flex justify-content-between">
+             
+
+              <div class="card-tools d-flex justify-content-start">
+                <span>أخر عشرة اقساط  </span>
+                <div class="input-group input-group-sm ml-4" style="width: 250px;">
+                  <div class="input-group-append">
+                    <button type="submit" class="btn btn-info"><i class="fas fa-search"></i></button>
+                  </div>
+                  <input type="text" name="table_search" class="form-control" placeholder="أبحث">
+                </div>
+              </div>
+
+              <!-- buttton minus -->
+              <a class="btn" data-toggle="collapse" data-target="#table" aria-expanded="true" aria-controls="table">
+                <i class="fa fa-minus"></i> 
+              </a>
+
+          </div>
+        </div>
+
+      
+      <!-- /.card-header -->
+      <div class="card-body table-responsive p-0 collapse show" style="height: 400px" id="table" aria-labelledby="headingOne" data-parent="#tableaccordion">
+          <table id="dtDynamicVerticalScrollExample" class="table table-hover table-sm">
+              <thead class="bg-info">
+                  <tr>
+                      <th> ت  </th>
+                      <th> أسم المستخدم الكامل </th>  
+                      <th>البريد الاكتروني</th>
+                      <th>  رقم الهاتف    </th>
+                      <th> تاريخ الاضافه </th>
+                      <th> </th>
+                    </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let user of users">
+                  <td>{{ user.id }} </td>
+                  <td>{{ user.name }} </td>
+                  <td>{{ user.email }} </td>
+                  <td>{{ user.phone }} </td>
+                  <td>{{ user.dateAdded }} </td>                    
+                  <td>
+                    <div class="btn-group float-left" role="group" aria-label="Second group">
+                      <button type="button" class="btn py-0 text-danger"><i class="fas fa-trash"></i></button>
+                      <button type="button" class="btn py-0 text-info"><i class="fas fa-user-edit"></i></button>
+                      <!-- Button modal for add user  -->
+                      <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#exampleModal">
+                        تعديل الصلاحيات 
+                      </button>
+                    </div>
+                  </td>                    
+                </tr>
+              </tbody>
+          </table>
+      </div>
+      <!-- /.card-body -->
+  </div>
+</div>
+
+
+
+<div id="down-button" class="fixed-bottom m-4 d-flex justify-content-end">
+  <!-- Button modal for add user  -->
+  <button type="button" class="btn btn-info btn-lg rounded-circle" data-toggle="modal" data-target="#exampleModalCenter">
+    <i class="fas fa-plus"></i>
+  </button>
+</div>
+
+
+
+<!-- Modal add corporation  -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h5 class="modal-title" id="exampleModalLongTitle"> أضافة مستخدم   </h5>
+      </div>
+ 
+      <form>
+        <div class="modal-body">
+
+          <div class="form-group">
+            <label for="exampleInputPassword1">الاسم القسم الكامل  </label>
+            <span class="float-left text-sm badge badge-warning mt-1">أضافه مستخدم جديد    </span>
+            <input type="text" class="form-control form-control-sm" placeholder="  زيد قاسم   ">
+          </div>
+
+          <div class="form-group">
+            <span class="float-left text-sm badge badge-warning mt-1">    </span>
+            <input type="text" class="form-control form-control-sm" placeholder=" zaidqassim12@gmail.com  ...    ">
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group col-md-5">
+                <label for="inputPassword4">الجنس</label>
+                <select name="" id="" class="form-control form-control-sm">
+                  <option value="-1"> أختار الحاله الزوجيه</option>
+                  <option>ذكر  </option>
+                  <option>أنثى  </option>
+                </select>                                          
+            </div>
+            <div class="form-group col-md-7">
+                 <label for="inputEmail4">رقم الهاتف </label>
+                 <input type="number" class="form-control form-control-sm" placeholder="078 000 000 00">                                         
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-5">
+              <!-- user Card -->
+              <div id="box-user-phone" class="card border-0">
+                <img class="card-img-top rounded-circle" src="../assets/images/user.jpg" alt="Card">
+                <div class="card-body">
+                  <h5 class="card-title"> صورة المستخدم </h5>
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="customFile">
+                    <label class="custom-file-label text-sm" for="customFile"> أختار صوره</label>
+                  </div>
+                </div>
+                <!-- /. user Card -->
+              </div>
+            </div>
+          </div>
+        </div>
+             
+        <div class="modal-footer">
+          <!-- buttons -->
+          <button type="reset" class="btn btn-outline-dark"><i class="fas fa-sync-alt"></i>  إعادة تعيين </button>
+          <button type="submit" class="btn btn-info "><i class="fa fa-save"></i>  حفظ ومتابعه</button>
+        </div>
+      </form>  
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+ 
+
+
+
+<!-- Modal edit Role  -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">صلاحيات المستخدم </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+          <label class="form-check-label" for="defaultCheck1">
+            روت النظام 
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+          <label class="form-check-label" for="defaultCheck1">
+            مدير النظام 
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+          <label class="form-check-label" for="defaultCheck1">
+            مدير قسم  
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+          <label class="form-check-label" for="defaultCheck1">
+            موظف  قسم  
+          </label>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info">حفظ وتحديث</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">اغلاق</button>
+      </div>
+    </div>
+  </div>
+</div>

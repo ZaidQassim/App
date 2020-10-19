@@ -1,0 +1,143 @@
+
+
+
+<!-- Start Sidebar-->
+<nav class="d-none d-md-block bg-white sidebar shadow-lg rounded" id="sidebar">
+  <div class="sidebar-sticky">
+      <ul class="nav flex-column flex-nowrap overflow-hidden">
+
+          <li class="nav-item mt-3" routerLinkActive="active" >
+              <a class="nav-link text-truncate" [routerLink]="['/home']" >
+                  <i class="fa fa-home nav-icon"></i>
+                  <span>الصفحه الرئسيه  </span>
+              </a>
+          </li>
+
+          <div class="dropdown-divider"></div>
+
+          <li class="nav-item mb-2" routerLinkActive="active" >
+              <a class="nav-link text-truncate" [routerLink]="['/corporationList']">
+                  <i class="fa fa-plus-circle nav-icon"></i>
+                  <span>أضافة مؤسسه جديده    </span>
+              </a>
+          </li>
+
+          <li class="nav-item mb-2">
+              <a class="nav-link collapsed text-truncate" href="#submenu1" data-toggle="collapse" data-target="#submenu1" >  
+                  <i class="fas fa-users-cog nav-icon"></i>                               
+                  <span class="">أدارة المستخدمين</span>
+              </a>
+              <div class="collapse" id="submenu1" aria-expanded="false">
+                  <ul class="flex-column nav text-center">
+                      <li class="nav-item ml-5" routerLinkActive="active">
+                          <a class="nav-link text-truncate" [routerLink]="['/userlist']">
+                              <i class="fas fa-list-ul nav-icon"></i>                           
+                              <span>المستخدمين  </span>
+                          </a>
+                      </li>
+                      
+                      <li class="nav-item ml-5">
+                          <a class="nav-link text-truncate">
+                            <i class="fas fa-user-plus"></i>                           
+                            <span> أضافة مستخدم  </span>
+                          </a>
+                      </li>
+                      
+                  </ul>
+              </div>
+          </li>
+
+
+          <div class="dropdown-divider"></div>
+
+          <li class="nav-item mb-2" routerLinkActive="active">
+            <a class="nav-link text-truncate" [routerLink]="['/book']">
+                <i class="fa fa-plus-circle nav-icon"></i>
+                <span>رفع كتاب جديد </span>
+            </a>
+          </li>
+
+          <div class="dropdown-divider"></div>
+
+
+          <li class="nav-item mb-2">
+            <a class="nav-link collapsed text-truncate" href="#submenu2" data-toggle="collapse" data-target="#submenu2" >  
+                <i class="fas fa-users-cog nav-icon"></i>                               
+                <span class="">أدارة وارشفت الكتب   </span>
+            </a>
+            <div class="collapse" id="submenu2" aria-expanded="false">
+                <ul class="flex-column nav text-center">
+                    <li class="nav-item ml-5">
+                        <a class="nav-link text-truncate" href="">
+                            <i class="fas fa-list-ul nav-icon"></i>                           
+                            <span> جميع الكتب</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item ml-5">
+                        <a class="nav-link text-truncate" href="">
+                            <i class="fas fa-list-ul nav-icon"></i>                           
+                            <span> الكتب المرسله</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item ml-5">
+                        <a class="nav-link text-truncate" href="">
+                            <i class="fas fa-list-ul nav-icon"></i>                           
+                            <span> الكتب المستلمه</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </li>
+        
+        <h6 class="text-center text-muted mt-3">التقارير</h6>
+
+          
+
+        <li class="nav-item">
+          <a class="nav-link text-truncate" href="#reports" data-toggle="collapse" data-target="#reports" >   
+            <i class="fas fa-clipboard-list nav-icon"></i>                              
+            <span class=""> التقارير</span>
+          </a>
+          <div class="collapse" id="reports" aria-expanded="false">
+              <ul class="flex-column nav text-center">
+                  <li class="nav-item ml-4">
+                      <a class="nav-link text-truncate" href="#">
+                        <i class="far fa-circle nav-icon"></i>
+                        <span>التقارير </span>
+                      </a>
+                  </li>
+                  
+                  <li class="nav-item ml-4">
+                      <a class="nav-link text-truncate" href="#">
+                        <i class="far fa-circle nav-icon"></i>   
+                        <span>التقارير </span>
+                      </a>
+                  </li>
+                  
+              </ul>
+          </div>
+        </li>
+
+        <div class="dropdown-divider"></div>
+
+        <li class="nav-item">
+          <a class="nav-link text-truncate" href="#">
+            <i class="far fa-circle nav-icon"></i>
+              <span>2  الصفحه  الجديده  </span>
+            </a>
+        </li>
+
+        <div class="dropdown-divider"></div>
+
+
+      </ul>
+  </div>
+</nav> 
+<!--  /. End Sidebar -->
+
+
+
+

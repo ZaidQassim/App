@@ -1,0 +1,24 @@
+
+
+<!-- <app-login *ngIf="!loggedIn()"></app-login> --> 
+
+<div class="container-fluid">
+  <app-nav-bar></app-nav-bar>
+
+  <div class="row">    
+    <app-sidebar></app-sidebar>
+     
+    <!--Main area-->
+    <main role="main" class="col px-2 ml-auto">
+      <!-- Header content page  -->
+      <app-header-content-page></app-header-content-page>
+
+      <!-- Content Wrapper. Contains page content -->
+      <div class="container-fluid ">
+        <router-outlet></router-outlet>
+      </div> 
+
+    </main>
+      
+  </div>
+</div>

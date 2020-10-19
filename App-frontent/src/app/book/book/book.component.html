@@ -1,0 +1,282 @@
+
+ <div id="content">
+  <!-- Info boxes  -->
+  <div id="boxes">
+   <div class="row mt-4">
+     <div class="col-lg-3 col-6 mb-3" *ngFor="let corporation of books">
+
+      <!-- dotes settings -->
+       <div class="dotes-box dropdown">
+         <button class="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+           <i class="fas fa-ellipsis-v"></i>
+         </button>
+         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+           <a class="dropdown-item mr-3 text-danger" href="#"><i class="fas fa-trash-alt mr-2"></i> حذف</a>
+           <a class="dropdown-item" href="#"><i class="fas fa-edit mr-2"></i> تعديل</a>
+         </div>
+       </div>
+
+
+       <!-- box  -->
+       <a>
+         <div class="small-box">
+           <div class="icon">
+             <!-- <i class="fas fa-info-circle"></i> -->
+             <img src="{{ corporation.photo }}" alt="">
+           </div>
+
+           <div class="inner">
+             <h3>{{ corporation.title }}</h3>              
+             <p class="text-muted"> تاريخ الاضافة : {{corporation.dateAdded}}  </p>
+           </div> 
+
+         </div>
+       </a>
+       <!-- /. box  -->
+     </div> 
+   </div>
+ </div>
+  
+
+ <div id="down-button" class="fixed-bottom m-4 d-flex justify-content-end">
+   <!-- Button trigger modal -->
+   <button type="button" class="btn btn-info btn-lg rounded-circle" data-toggle="modal" data-target="#exampleModalCenter">
+     <i class="fas fa-plus"></i>
+   </button>
+ </div>
+
+</div> 
+
+<!-- Modal add book  -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+ <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+   <div class="modal-content">
+     <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+       </button>
+       <h5 class="modal-title" id="exampleModalLongTitle"> أضافة كتاب جديد </h5>
+     </div>
+
+    <form>
+      <div class="modal-body">
+
+        <div class="form-row">
+          <div class="form-group col-md-4">
+              <label for="inputPassword4"> المؤسسه او الجه المعنيه</label>
+              <select name="" id="" class="form-control form-control-sm">
+                <option value="-1"> اختار أسم المؤسسه المرسل له االكتاب</option>
+                <option>شركه انجاز  </option>
+                <option>شركه انجاز  </option>
+                <option>شركه انجاز  </option>
+                <option>شركه انجاز  </option>
+                <option>شركه انجاز  </option>
+              </select>                                          
+          </div>
+    
+          <div class="form-group col-md-4">
+            <label for="inputPassword4"> القسم المعني</label>
+            <select name="" id="" class="form-control form-control-sm">
+              <option value="-1"> اختار أسم القسم التابع للموسسه المختاره</option>
+              <option>قسم التطوير   </option>
+              <option>قسم التطوير   </option>
+              <option>قسم التطوير   </option>
+              <option>قسم التطوير   </option>
+              <option>قسم التطوير   </option>
+            </select>                                          
+          </div>
+    
+          <div class="form-group col-md-4">
+            <label for="inputPassword4"> القسم الفرعي</label>
+            <select name="" id="" class="form-control form-control-sm">
+              <option value="-1"> اختار أسم القسم التابع للقسم الرئيسي المختاره</option>
+              <option> تطوير الويب </option>
+              <option> تطوير الويب </option>
+              <option> تطوير الويب </option>
+              <option> تطوير الويب </option>
+            </select>                                          
+          </div>    
+      </div>
+
+      
+        <div class="form-group">
+          <label for="exampleInputPassword1">عنوان الكتاب  </label>
+          <span class="float-left text-sm badge badge-warning mt-1">عنون الكتاب </span>
+          <input type="text" class="form-control form-control-sm" placeholder="وزارة الاتصالات / قسم المحاسبه   ">
+        </div>
+      
+        <div class="form-row">
+            <div class="form-group col-md-7">
+              <label for="inputEmail4">رقم الكتاب </label>
+              <input type="text" class="form-control form-control-sm" placeholder="129272">
+            </div>
+            <div class="form-group col-md-5">
+              <label for="inputEmail4">تاريخ أضافة الكتاب  </label>
+              <input type="date" class="form-control form-control-sm" placeholder="Email">
+            </div>
+        </div>
+      
+        <div class="form-row">
+          <div class="form-group col-md-5">
+            <!-- user Card -->
+            <div id="box-user-phone" class="card border-0 text-center">
+              <img class="card-img-top img-thumbnail" src="../assets/images/book.jpg" alt="Card">
+              <div class="card-body">
+                <h5 class="card-title"> صورة مرفقه للكتاب  </h5>
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="customFile">
+                  <label class="custom-file-label text-sm" for="customFile"> أختار صورت للكتاب </label>
+                </div>
+              </div>
+              <!-- /. user Card -->
+            </div>      
+          </div>
+      
+          <div class="form-group col-md-7">
+
+
+          <!-- ng 2 file upload   -->
+          <div class="row">
+ 
+              <div class="col-md-3">
+       
+                  <h3>Select files</h3>
+       
+                  <div ng2FileDrop
+                    [ngClass]="{'nv-file-over': hasBaseDropZoneOver}"
+                    (fileOver)="fileOverBase($event)"
+                    [uploader]="uploader"
+                    class="card bg-faded p-3 text-center mb-3 d my-drop-zone">
+                    <i class="fa fa-upload fa-3x"></i>
+                    إفلات الصور هنا
+                  </div>
+       
+                  Multiple
+                  <input type="file" ng2FileSelect [uploader]="uploader" multiple  /><br/>
+       
+                  <!-- Single
+                  <input type="file" ng2FileSelect [uploader]="uploader" /> -->
+
+              </div>
+       
+              <div class="col-md-9" style="margin-bottom: 40px">
+       
+                  <h3>قائمة انتظار التحميل</h3>
+                  <p>طول قائمة الانتظار: {{ uploader?.queue?.length }}</p>
+       
+                  <table class="table">
+                      <thead>
+                      <tr>
+                          <th width="50%">الاسم</th>
+                          <th>الحجم</th>
+                          <th>التقدم</th>
+                          <th>الحالة</th>
+                          <th>أجراءات</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr *ngFor="let item of uploader.queue">
+                          <td><strong>{{ item?.file?.name }}</strong></td>
+                          <td *ngIf="uploader.options.isHTML5" nowrap>{{ item?.file?.size/1024/1024 | number:'.2' }} MB</td>
+                          <td *ngIf="uploader.options.isHTML5">
+                              <div class="progress" style="margin-bottom: 0;">
+                                  <div class="progress-bar" role="progressbar" [ngStyle]="{ 'width': item.progress + '%' }"></div>
+                              </div>
+                          </td>
+                          <td class="text-center">
+                              <span *ngIf="item.isSuccess"><i class="glyphicon glyphicon-ok"></i></span>
+                              <span *ngIf="item.isCancel"><i class="glyphicon glyphicon-ban-circle"></i></span>
+                              <span *ngIf="item.isError"><i class="glyphicon glyphicon-remove"></i></span>
+                          </td>
+                          <td nowrap>
+                              <button type="button" class="btn btn-success btn-xs"
+                                      (click)="item.upload()" [disabled]="item.isReady || item.isUploading || item.isSuccess">
+                                  <span class="glyphicon glyphicon-upload"></span> تحميل 
+                              </button>
+                              <button type="button" class="btn btn-warning btn-xs"
+                                      (click)="item.cancel()" [disabled]="!item.isUploading">
+                                  <span class="glyphicon glyphicon-ban-circle"></span> إلغاء
+                              </button>
+                              <button type="button" class="btn btn-danger btn-xs"
+                                      (click)="item.remove()">
+                                  <span class="glyphicon glyphicon-trash"></span> إزالة
+                              </button>
+                          </td>
+                      </tr>
+                      </tbody>
+                  </table>
+       
+                  <div>
+                      <div>
+                        تقدم قائمة الانتظار:
+                          <div class="progress">
+                              <div class="progress-bar" role="progressbar" [ngStyle]="{ 'width': uploader.progress + '%' }"></div>
+                          </div>
+                      </div>
+                      <button type="button" class="btn btn-success btn-s"
+                              (click)="uploader.uploadAll()" [disabled]="!uploader.getNotUploadedItems().length">
+                          <span class="glyphicon glyphicon-upload"></span> تحميل الكل
+                      </button>
+                      <button type="button" class="btn btn-warning btn-s"
+                              (click)="uploader.cancelAll()" [disabled]="!uploader.isUploading">
+                          <span class="glyphicon glyphicon-ban-circle"></span> الغاء الكل 
+                      </button>
+                      <button type="button" class="btn btn-danger btn-s"
+                              (click)="uploader.clearQueue()" [disabled]="!uploader.queue.length">
+                          <span class="glyphicon glyphicon-trash"></span> حذف الكل 
+                      </button>
+                  </div>
+       
+              </div>
+       
+          </div>
+          <!-- /. ng 2 file upload   -->
+
+
+            
+
+          </div>
+      
+        </div>
+          
+        <!-- buttons -->
+        <div class="form-group">
+            <button type="reset" class="btn btn-outline-dark"><i class="fas fa-sync-alt"></i>  إعادة تعيين </button>
+            <button type="submit" class="btn btn-info ml-2"><i class="far fa-save"></i>  حفظ فقط</button>
+            <button type="submit" class="btn btn-success ml-2"><i class="far fa-save"></i>  حفظ وارسال </button>
+        </div>
+      </div>
+    </form>
+     
+   </div>
+ </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

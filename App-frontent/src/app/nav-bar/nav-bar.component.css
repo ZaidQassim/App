@@ -1,0 +1,196 @@
+
+/* public */
+a {
+  color: #000000;
+}
+
+
+
+.img-circle {
+  border-radius: 50%;
+  height: 80px;
+} 
+
+.navbar { 
+  border-bottom: 1px solid #dee2e6;
+}
+
+
+
+/* Start logo  */
+.logo {
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 22px;
+}
+.logo a{
+  text-decoration: none;
+}
+.logo a:hover{
+  color: black;
+}
+.logo img { 
+  width: 30px;
+  height: 30px; 
+  border-radius: 50%;
+}
+
+/* Start user profile  */
+.user-menu>.dropdown-menu {
+  padding: 0;
+  width: 280px;
+}
+
+.user-menu>.dropdown-menu>li.user-header {
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.user-image {
+  width: 30px;
+  border-radius: 50%;
+}
+/* End user profile  */
+
+
+.container-fluid > .row {
+  padding-top: 60px;
+}
+
+
+/* Start search box  */
+.form-search {
+    margin-right: 110px;
+}
+.form-search .searchbar{
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 45px;
+    background-color: #e7e7e7;
+    border-radius: 30px;
+    padding: 8px;
+  }
+
+  .search_input{
+    color: black;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 450px;
+    caret-color:transparent;
+    line-height: 25px;
+    transition: width 0.4s linear;
+  }
+
+  .searchbar:hover > .search_input{
+    padding: 0 8px;
+    width: 450px;
+    caret-color:black;
+    transition: width 0.4s linear;
+  }
+
+  .searchbar:hover > .search_icon{
+    /* background: white;
+    color: #1289A7; */
+  }
+
+  .search_icon{
+    height: 30px;
+    width: 30px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color:black;
+    text-decoration:none;
+    
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Start SideBar */
+#sidebar {
+ min-height: 100vh;
+}
+
+#sidebar .nav-icon { 
+  margin-left: 30px;
+  color: black;
+  font-size: 18px;
+}
+
+/* on toggle remove ▾ */
+#sidebar.active .nav-link[data-toggle].collapsed::before {
+  content: " ";
+  padding-right: 0;
+}
+
+/* on toggle remove ▾ */
+#sidebar.active .nav-link[data-toggle]:not(.collapsed):before {
+  content: " ";
+  padding-right: 0;
+}
+
+#sidebar .nav-link[data-toggle].collapsed::before {
+  content: " ▾";
+  float: left;
+}
+#sidebar .nav-link[data-toggle]:not(.collapsed):before {
+  content: " ▴";
+  float: left;
+}
+
+#sidebar  .sidebar-sticky .nav-item  .nav-link  {
+  padding: 10px 15px 10px 60px;
+  transition: all 0.3s ease-in-out;
+}
+
+#sidebar  .sidebar-sticky  .nav-item .nav-link:hover {
+  background-color: #c2c7d08a;
+  border-radius: 25px 0 0 25px  ;
+  transform: scale(.9);
+  color: black;
+}
+
+#sidebar .active {
+  background-color: #27ae60;
+  border-radius: 25px 0 0 25px  ;
+  margin-left: 20px;
+}
+
+#sidebar .active a{
+  color: #fff;
+} 
+
+
+
+
+
+
+
+
+
+

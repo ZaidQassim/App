@@ -1,0 +1,91 @@
+/* Start boxes  */
+
+.dotes-box{
+  position: absolute;
+  top: 0px;
+  z-index: 2;
+}
+
+
+.dotes-box .btn i{
+  color: #4e4e4e;
+} 
+
+#boxes a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+.small-box {
+  padding: 10px 15px;
+  border-radius: .25rem;
+  box-shadow: 0 0 1px rgba(0,0,0,.125), 0 1px 3px rgba(0,0,0,.2);
+  display: block;
+  margin-bottom: 20px;
+  position: relative;
+  background: #1289A7;
+  transition: all .2s ease-in-out; 
+}
+
+#boxes .small-box:hover {
+  transform: scale(1.1);
+}
+
+.small-box>.inner {
+  padding: 15px;
+}
+
+.small-box h3, .small-box p {
+  z-index: 5;
+  color: #f8f9fa;
+}
+
+.small-box h3 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.small-box h3, .small-box p {
+  z-index: 5;
+}
+
+.small-box p {
+  font-size: .9rem;
+}
+
+.small-box .icon {
+  color: rgba(0,0,0,.15);
+  z-index: 0;
+}
+.small-box .icon img {
+  height: 70px;
+  font-size: 60px;
+  top: 20px;
+}
+
+.small-box .icon>img {
+  font-size: 90px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  transition: all .3s linear;
+} 
+
+.small-box>.small-box-footer {
+  background: rgba(0,0,0,.1);
+  color: rgba(255,255,255,.8);
+  display: block;
+  padding: 3px 0;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  z-index: 10;
+}
+
+
+

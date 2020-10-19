@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap-rtl.min.css";
+@import "../node_modules/font-awesome/css/font-awesome.min.css";
+
+
+
+/* import fonts */ 
+@font-face { 
+    font-family: 'Cairo-Regular';
+    src: url('../src/assets/fonts/Cairo-Regular.ttf');
+}
+
+body{
+  background: #f8f9fa;
+  font-family: 'Cairo-Regular';
+  /* direction: rtl; */
+}
+
+.color-primary {
+  color: #2980b9;
+}
+
+
+/* Start Custom Scrollbar  */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px gr; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #1289A7; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #04596e; 
+  }
+
+  /* End Custom Scrollbar  */

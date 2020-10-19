@@ -1,0 +1,20 @@
+
+/* tables  */
+table tr th,  table tr td, .input-group-append .btn {
+    font-size: 12px;
+}
+
+
+.input-group-append {
+  display: inline-block;
+}
+
+.input-group-sm .form-control {
+  font-size: 12px;
+}
+
+
+#box-user-phone img {
+  height: 80px;
+  width: 80px;
+}

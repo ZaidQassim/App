@@ -1,0 +1,86 @@
+
+/* Start SideBar */
+#sidebar {
+  min-height: 100vh;
+}
+
+#sidebar .nav-link {
+  color: #000000;
+}
+
+#sidebar .nav-icon { 
+  margin-left: 30px;
+  color: black;
+  font-size: 18px;
+}
+   
+/* on toggle remove ▾ */
+#sidebar .nav-link[data-toggle].collapsed::before {
+  content: " ";
+  padding-right: 30px;
+}
+
+/* on toggle remove ▾ */
+#sidebar .nav-link[data-toggle]:not(.collapsed):before {
+  content: " ";
+  padding-right: 30px;
+}
+
+#sidebar .nav-link[data-toggle].collapsed::before {
+  content: " ▾";
+  float: left;
+}
+#sidebar .nav-link[data-toggle]:not(.collapsed):before {
+  content: " ▴";
+  float: left;
+}
+
+#sidebar  .sidebar-sticky .nav-item  .nav-link  {
+  /* padding: 10px 15px 10px 60px; */
+  transition: all 0.3s ease-in-out;
+  text-align: right;
+}
+   
+#sidebar  .sidebar-sticky  .nav-item .nav-link:hover {
+  background-color: #c2c7d08a;
+  border-radius: 25px 0 0 25px  ;
+  transform: scale(.9);
+  color: black;
+}
+   
+.active {
+     background-color: #1289A7;
+     border-radius: 25px 0 0 25px  ;
+     margin-left: 20px;
+   }
+   
+   #sidebar .active a{
+     color: #fff;
+   } 
+
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   /* Start card */ 
+   .card img {
+     width: 150px;
+     border-radius: 50%;
+     margin: auto;
+   }
+   
+   
+   
+   
